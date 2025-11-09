@@ -14,32 +14,58 @@ export interface ButtonProps {
   className?: string;
 }
 
+// export interface PropertyProps {
+//   id: number;
+//   name: string;
+//   address: {
+//     state: string;
+//     city: string;
+//     country: string;
+//   };
+//   rating: number;
+//   category: string[];
+//   price: number;
+//   offers: {
+//     bed: string;
+//     shower: string;
+//     occupants: string;
+//   };
+//   image: string;
+//   images?: string[];
+//   discount?: string;
+//   description: string;
+//   reviews: {
+//     name: string;
+//     avatar: string;
+//     rating: number;
+//     comment: string;
+//   }[]
+// }
+
 export interface PropertyProps {
   id: number;
-  name: string;
-  address: {
-    state: string;
-    city: string;
-    country: string;
-  };
+  title: string;
+  description: string;
   rating: number;
+  location: string;
+  discount?: string;
   category: string[];
-  price: number;
-  offers: {
-    bed: string;
-    shower: string;
-    occupants: string;
-  };
+  amenities: string[];
   image: string;
   images?: string[];
-  discount?: string;
-  description: string;
+  price_per_night: number;
+  is_available: boolean;
+  date_listed: string;
+  owner: {
+    name: string;
+    contact: string;
+  };
   reviews: {
     name: string;
     avatar: string;
     rating: number;
     comment: string;
-  }[]
+   }[]
 }
 
 export interface BookingProps {

@@ -12,7 +12,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
       <div className="h-56 w-full relative">
         <img
           src={property.image}
-          alt={property.name}
+          alt={property.title}
           className="h-full w-full object-cover"
         />
         {property.discount && (
@@ -24,15 +24,15 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
 
       {/* Details */}
       <div className="p-4 space-y-2">
-        <h3 className="text-lg font-bold">{property.name}</h3>
+        <h3 className="text-lg font-bold">{property.title}</h3>
         <p className="text-sm text-gray-500">
-          {property.address.city}, {property.address.country}
+          {property.location}
         </p>
         <div className="flex items-center justify-between">
           <span className="text-blue-600 font-semibold">
-            ${property.price.toLocaleString()}
+            ${property.price_per_night.toLocaleString()}
           </span>
-          <span className="text-yellow-500 font-medium">⭐ {property.rating}</span>
+          <span className="text-yellow-500 font-medium">⭐ {property.ave_rating}</span>
         </div>
       </div>
     </div>

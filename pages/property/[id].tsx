@@ -59,7 +59,7 @@ export default function PropertyPage() {
         {/* Right column (Booking Section) */}
         <div className="lg:col-span-1">
           <div className="sticky top-8">
-            <BookingSection price={property.price} />
+            <BookingSection price={property.price_per_night} />
           </div>
         </div>
       </div>

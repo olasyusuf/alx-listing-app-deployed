@@ -5,11 +5,11 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
     <div className="w-full">
       {/* Header Section */}
       <div className="mb-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">{property.name}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">{property.title}</h1>
 
         <div className="flex flex-wrap items-center gap-2 mt-2 text-gray-600">
-          <span className="text-yellow-500 font-semibold">{property.rating} ★</span>
-          <span>· {property.address.city}, {property.address.state}, {property.address.country}</span>
+          <span className="text-yellow-500 font-semibold">{property.ave_rating} ★</span>
+          <span>· {property.location}</span>
         </div>
 
         {property.discount && (
@@ -23,33 +23,17 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
         <img
           src={property.image}
-          alt={property.name}
+          alt={property.title}
           className="w-full h-64 object-cover rounded-lg sm:col-span-2 md:col-span-3"
         />
         {property.images?.map((img, index) => (
           <img
             key={index}
             src={img}
-            alt={`${property.name}-${index}`}
+            alt={`${property.title}-${index}`}
             className="w-full h-48 object-cover rounded-lg"
           />
         ))}
-      </div>
-
-      {/* Offers Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-        <div className="bg-gray-50 p-4 rounded-lg text-center">
-          <p className="text-xl font-semibold">{property.offers.bed}</p>
-          <p className="text-gray-600">Beds</p>
-        </div>
-        <div className="bg-gray-50 p-4 rounded-lg text-center">
-          <p className="text-xl font-semibold">{property.offers.shower}</p>
-          <p className="text-gray-600">Showers</p>
-        </div>
-        <div className="bg-gray-50 p-4 rounded-lg text-center">
-          <p className="text-xl font-semibold">{property.offers.occupants}</p>
-          <p className="text-gray-600">Occupancy</p>
-        </div>
       </div>
 
       {/* Description */}
