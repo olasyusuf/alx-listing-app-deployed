@@ -5,14 +5,14 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
     <div className="w-full">
       {/* Header Section */}
       <div className="mb-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">{property.title}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">{property?.title}</h1>
 
         <div className="flex flex-wrap items-center gap-2 mt-2 text-gray-600">
-          <span className="text-yellow-500 font-semibold">{property.ave_rating} ★</span>
-          <span>· {property.location}</span>
+          <span className="text-yellow-500 font-semibold">{property?.ave_rating} ★</span>
+          <span>· {property?.location}</span>
         </div>
 
-        {property.discount && (
+        {property?.discount && (
           <div className="mt-2 inline-block bg-green-100 text-green-700 text-sm px-3 py-1 rounded-md font-medium">
             {property.discount}
           </div>
@@ -26,7 +26,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
           alt={property.title}
           className="w-full h-64 object-cover rounded-lg sm:col-span-2 md:col-span-3"
         />
-        {property.images?.map((img, index) => (
+        {property?.images?.map((img, index) => (
           <img
             key={index}
             src={img}
@@ -46,7 +46,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
       <div>
         <h2 className="text-2xl font-semibold text-gray-800 mb-3">What this place offers</h2>
         <ul className="flex flex-wrap gap-3">
-          {property.category.map((amenity, index) => (
+          {property?.category.map((amenity, index) => (
             <li
               key={index}
               className="bg-gray-200 hover:bg-gray-300 px-3 py-2 rounded-md text-sm text-gray-800 transition"
