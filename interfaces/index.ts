@@ -46,7 +46,7 @@ export interface PropertyProps {
   id: number;
   title: string;
   description: string;
-  rating: number;
+  avg_rating: number;
   location: string;
   discount?: string;
   category: string[];

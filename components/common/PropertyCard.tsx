@@ -32,7 +32,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           <span className="text-blue-600 font-semibold">
             ${property.price_per_night.toLocaleString()}
           </span>
-          <span className="text-yellow-500 font-medium">⭐ {property.ave_rating}</span>
+          <span className="text-yellow-500 font-medium">⭐ {property.avg_rating}</span>
         </div>
       </div>
     </div>

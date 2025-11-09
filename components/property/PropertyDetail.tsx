@@ -8,7 +8,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
         <h1 className="text-3xl md:text-4xl font-bold text-gray-800">{property?.title}</h1>
 
         <div className="flex flex-wrap items-center gap-2 mt-2 text-gray-600">
-          <span className="text-yellow-500 font-semibold">{property?.ave_rating} ★</span>
+          <span className="text-yellow-500 font-semibold">{property?.avg_rating} ★</span>
           <span>· {property?.location}</span>
         </div>
 
