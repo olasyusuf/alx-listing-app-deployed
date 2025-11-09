@@ -4,13 +4,13 @@ import ReviewSection from "@/components/property/ReviewSection";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { PropertyProps } from "@/interfaces";
 
 export default function PropertyPage() {
   const router = useRouter();
   const { id } = router.query;
-  type Property = any;
 
-  const [property, setProperty] = useState<Property | null>(null);
+  const [property, setProperty] = useState<PropertyProps | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

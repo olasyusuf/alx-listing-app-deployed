@@ -4,14 +4,12 @@ import axios from "axios";
 
 const BookingForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    cardNumber: "",
-    expirationDate: "",
-    cvv: "",
-    billingAddress: "",
+    propertyName: "",
+    guestName: "",
+    guestEmail: "",
+    checkInDate: "",
+    checkOutDate: "",
+    rooms: 0
   });
 
   const [loading, setLoading] = useState(false);
