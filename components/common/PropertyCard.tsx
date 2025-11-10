@@ -11,7 +11,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
       {/* Image */}
       <div className="h-56 w-full relative">
         <img
-          src={property.image}
+          src={property.img_url}
           alt={property.title}
           className="h-full w-full object-cover"
         />

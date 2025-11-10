@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 
-const ReviewSection: React.FC<{ propertyId: number }> = ({ propertyId }) => {
+const ReviewSection: React.FC<{ propertyId: string }> = ({ propertyId }) => {
   type Review = {
     name: string;
     avatar: string;

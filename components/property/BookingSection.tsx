@@ -23,7 +23,7 @@ const BookingSection: React.FC<{ price: number }> = ({ price }) => {
       </div>
 
       {/* Button */}
-      <button className="mt-6 bg-green-500 hover:bg-green-600 text-white py-3 w-full rounded-lg font-semibold transition">
+      <button className="mt-4 block text-center bg-blue-600 hover:bg-blue-700 text-white py-3 w-full rounded-lg font-semibold transition">
         Reserve now
       </button>
     </div>

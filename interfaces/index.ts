@@ -43,7 +43,7 @@ export interface ButtonProps {
 // }
 
 export interface PropertyProps {
-  id: number;
+  id: string;
   title: string;
   description: string;
   avg_rating: number;
@@ -51,7 +51,7 @@ export interface PropertyProps {
   discount?: string;
   category: string[];
   amenities: string[];
-  image: string;
+  img_url: string;
   images?: string[];
   price_per_night: number;
   is_available: boolean;

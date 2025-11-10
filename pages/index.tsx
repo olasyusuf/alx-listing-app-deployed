@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { HERO_BACKGROUND } from "@/constants/images";
 import { FILTERS } from "@/constants/filters";
 import { PropertyProps } from "@/interfaces";
@@ -95,13 +96,14 @@ const HomePage: React.FC = () => {
           Available Properties
         </h2>
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {filteredProperties.map((property, index) => (
-            <PropertyCard key={index} property={property} />
-          ))}
-        </div>
-        <div className="grid grid-cols-3 gap-4">
-          {properties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
+          {filteredProperties.map((property) => (
+            <Link
+              key={property.id}
+              href={`/property/${property.id}`}
+              className="block hover:scale-105 transition-transform duration-200"
+            >
+              <PropertyCard property={property} />
+            </Link>
           ))}
         </div>
       </section>

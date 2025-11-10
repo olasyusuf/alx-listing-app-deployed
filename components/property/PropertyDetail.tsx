@@ -22,7 +22,7 @@ const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => 
       {/* Image Gallery */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
         <img
-          src={property.image}
+          src={property.img_url}
           alt={property.title}
           className="w-full h-64 object-cover rounded-lg sm:col-span-2 md:col-span-3"
         />
